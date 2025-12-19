@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>RugVibe - Legal Documents</title>
+    <title>[App Name] - Legal Documents</title>
+    <!-- Import Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-color: #E07A5F; /* Terracotta */
             --text-color: #333;
             --bg-color: #FAFAF9; /* Warm Stone */
             --header-height: 60px;
+            --font-main: 'Inter', sans-serif; /* Updated Font to Inter */
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: var(--font-main);
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
@@ -52,6 +58,7 @@
             padding: 8px 24px;
             font-size: 14px;
             font-weight: 600;
+            font-family: var(--font-main);
             border-radius: 6px;
             color: #666;
             cursor: pointer;
@@ -80,19 +87,22 @@
             display: block; /* Show active */
         }
 
-        h1 { font-size: 24px; margin-bottom: 10px; color: #111; }
-        h2 { font-size: 18px; margin-top: 25px; margin-bottom: 10px; color: #111; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        h3 { font-size: 16px; margin-top: 15px; margin-bottom: 5px; font-weight: 600; }
+        h1 { font-size: 24px; margin-bottom: 10px; color: #111; font-weight: 700; }
+        h2 { font-size: 20px; margin-top: 30px; margin-bottom: 15px; color: #111; border-bottom: 1px solid #eee; padding-bottom: 5px; font-weight: 600; }
+        h3 { font-size: 16px; margin-top: 20px; margin-bottom: 10px; font-weight: 600; }
         p { font-size: 14px; margin-bottom: 15px; color: #444; text-align: justify; }
         ul { margin-bottom: 15px; padding-left: 20px; }
-        li { font-size: 14px; margin-bottom: 5px; color: #444; }
+        li { font-size: 14px; margin-bottom: 8px; color: #444; }
         
         .update-date {
             font-size: 12px;
             color: #999;
             margin-bottom: 20px;
             display: block;
+            font-style: italic;
         }
+
+        a { color: var(--primary-color); text-decoration: none; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
@@ -115,38 +125,46 @@
             <h1>Privacy Policy</h1>
             <span class="update-date">Last Updated: [Current Date]</span>
 
-            <p>Welcome to RugVibe. We value your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and share your information.</p>
+            <p>Welcome to [App Name]. We value your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and share your information when you use our mobile application and services.</p>
 
             <h2>1. Information We Collect</h2>
             <ul>
-                <li><strong>Account Information:</strong> Name, email address, and login credentials (via Google/Apple).</li>
-                <li><strong>User-Generated Content:</strong> Text prompts used for AI generation, uploaded reference images, and generated rug designs.</li>
-                <li><strong>Payment Information:</strong> We do not store credit card details directly. For commission payouts, we collect necessary account details (e.g., PayPal email) via secure third-party processors.</li>
-                <li><strong>Device Data:</strong> Device model, OS version, and unique device identifiers for functionality and fraud prevention.</li>
+                <li><strong>Account Information:</strong> Name, email address, username, and login credentials provided via third-party authentication services (e.g., Google, Apple).</li>
+                <li><strong>User-Generated Content (UGC):</strong> Data you provide to generate designs, including <strong>text prompts</strong>, <strong>uploaded reference images</strong>, and the resulting generated rug designs.</li>
+                <li><strong>Financial Information:</strong> We do not store full credit card numbers. For commission payouts and purchases, we collect necessary payment account details (e.g., PayPal email, Stripe account ID) and transaction history via secure third-party processors.</li>
+                <li><strong>Device & Usage Data:</strong> IP address, device model, operating system version, unique device identifiers, and app usage patterns (e.g., features used, time spent) for functionality, analytics, and fraud prevention.</li>
             </ul>
 
             <h2>2. How We Use Your Information</h2>
             <p>We use your data to:</p>
             <ul>
-                <li>Provide AI generation services (sending prompts to AI providers).</li>
-                <li>Calculate and process affiliate commissions.</li>
-                <li>Improve our app functionality and user experience.</li>
-                <li>Detect and prevent fraud (e.g., self-referrals).</li>
+                <li>Provide AI generation services.</li>
+                <li>Process transactions and calculate/distribute affiliate commissions.</li>
+                <li>Verify your identity and prevent fraud (e.g., detecting self-referrals or bot activity).</li>
+                <li>Communicate with you regarding updates, security alerts, and support.</li>
+                <li>Enforce our Terms of Service and comply with legal obligations.</li>
             </ul>
 
-            <h2>3. AI & Third-Party Services</h2>
-            <p>To provide our services, we share specific data with third-party providers:</p>
+            <h2>3. Information Sharing & Third Parties</h2>
+            <p>We do not sell your personal data. We share data only as necessary to provide our services:</p>
             <ul>
-                <li><strong>AI Providers:</strong> Your text prompts and reference images are processed by third-party AI models (e.g., OpenAI, Midjourney) to generate designs.</li>
-                <li><strong>Payment Processors:</strong> We use Stripe/PayPal for payouts.</li>
-                <li><strong>Analytics:</strong> We use tools to understand app usage trends.</li>
+                <li><strong>AI Service Providers:</strong> Your text prompts and reference images are transmitted to third-party AI models to generate designs. These providers process data according to their own privacy policies.</li>
+                <li><strong>Manufacturing & Fulfillment Partners:</strong> If a product is purchased, order details (design, shipping address) are shared with our manufacturing partners to fulfill the order.</li>
+                <li><strong>Payment Processors:</strong> We share payment data with trusted providers (e.g., Stripe, PayPal) to process payouts and payments securely.</li>
+                <li><strong>Analytics Providers:</strong> We use third-party analytics tools to understand user behavior and improve app performance.</li>
             </ul>
 
-            <h2>4. Data Retention & Deletion</h2>
-            <p>You have the right to request the deletion of your account and data at any time via the "Settings" menu in the app. Upon deletion, your portfolio and unpaid commissions (if below threshold) will be removed.</p>
+            <h2>4. Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure.</p>
 
-            <h2>5. Contact Us</h2>
-            <p>If you have any questions, please contact us at: <a href="mailto:[Your Support Email]">[Your Support Email]</a></p>
+            <h2>5. Data Retention & Deletion</h2>
+            <p>We retain your data as long as your account is active or as needed to provide services. You have the right to request the deletion of your account and data at any time via the "Settings" menu in the app. Upon deletion, your portfolio and unpaid commissions (if below the payout threshold) will be permanently removed.</p>
+
+            <h2>6. Children's Privacy</h2>
+            <p>Our services are not intended for individuals under the age of 18. We do not knowingly collect personal data from children. If we become aware that a child has provided us with personal data, we will take steps to delete such information.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:[Your Support Email]">[Your Support Email]</a></p>
         </div>
 
         <!-- TERMS OF SERVICE SECTION -->
@@ -154,32 +172,55 @@
             <h1>Terms of Service</h1>
             <span class="update-date">Last Updated: [Current Date]</span>
 
-            <p>By using RugVibe, you agree to the following terms. Please read them carefully.</p>
+            <p>By accessing or using [App Name], you agree to be bound by these Terms. If you do not agree to these Terms, do not use our services.</p>
 
-            <h2>1. AI Generation & Content</h2>
+            <h2>1. User-Generated Content & AI</h2>
             <ul>
-                <li><strong>Acceptable Use:</strong> You agree not to generate content that is illegal, hateful, violent, or sexually explicit. We reserve the right to ban users who violate this policy.</li>
-                <li><strong>Ownership:</strong> Subject to third-party AI terms, you own the rights to the designs you generate, and you grant RugVibe a license to display, market, and sell products based on these designs.</li>
-                <li><strong>Disclaimer:</strong> AI generation is experimental. We do not guarantee that generated designs will be free of artifacts or exactly match your prompt.</li>
+                <li><strong>Your Content:</strong> You are solely responsible for the content you submit, including <strong>text prompts</strong> and <strong>uploaded images</strong> ("User Content"). You represent and warrant that you own or have the necessary rights to use and license your User Content.</li>
+                <li><strong>Prohibited Content:</strong> You agree not to generate or upload content that is illegal, hateful, violent, sexually explicit, infringes on third-party intellectual property rights (including trademarks and copyrights of brands), or violates any applicable laws.</li>
+                <li><strong>Rights Grant:</strong> Subject to the terms of third-party AI providers, you retain ownership of your generated designs. By using the service, you grant [App Name] a non-exclusive, worldwide, royalty-free license to use, reproduce, modify, display, and sell products based on your designs for the purpose of operating the service and marketing.</li>
+                <li><strong>AI Disclaimer:</strong> AI generation is an evolving technology. We do not guarantee that generated designs will be free of artifacts, unique, or exactly match your prompt.</li>
             </ul>
 
-            <h2>2. Affiliate Program & Commissions</h2>
+            <h2>2. Intellectual Property Policy (DMCA)</h2>
+            <p>[App Name] respects the intellectual property rights of others. We respond to valid notices of alleged copyright infringement.</p>
             <ul>
-                <li><strong>Commission Rate:</strong> You earn a commission (default 15%) on net sales generated through your unique tracking links.</li>
-                <li><strong>Locking Period:</strong> Commissions are held in a "Pending" state for <strong>35 days</strong> after the order is shipped to account for returns and processing.</li>
-                <li><strong>Payouts:</strong> You may request a payout once your "Available Balance" reaches the minimum threshold of <strong>$50</strong>.</li>
-                <li><strong>Returns:</strong> If a customer returns a product, the corresponding commission will be deducted from your balance.</li>
-                <li><strong>Self-Referrals:</strong> You may use your own link for personal purchases, but abuse of this system for fraud will result in account termination.</li>
+                <li>If you believe your work has been copied in a way that constitutes copyright infringement, please report it to us immediately at <a href="mailto:[Your Support Email]">[Your Support Email]</a>.</li>
+                <li>We reserve the right to remove content alleged to be infringing without prior notice and to terminate the accounts of repeat infringers.</li>
             </ul>
 
-            <h2>3. User Conduct</h2>
-            <p>You agree not to manipulate our referral system, use bots, or engage in fraudulent activity. We reserve the right to freeze funds and suspend accounts suspected of fraud.</p>
+            <h2>3. Affiliate Program & Commissions</h2>
+            <ul>
+                <li><strong>Commission Structure:</strong> You earn a commission (default rate of [Commission Rate], subject to change) on net sales (excluding taxes, shipping, and returns) generated through your unique tracking links.</li>
+                <li><strong>Locking Period:</strong> Commissions are held in a "Pending" state for <strong>35 days</strong> after the order is shipped. This period accounts for our return policy and processing time.</li>
+                <li><strong>Payouts:</strong> You may request a payout once your "Available Balance" reaches the minimum threshold of <strong>$50</strong>. Payouts are processed via supported third-party payment methods.</li>
+                <li><strong>Returns & Chargebacks:</strong> If a customer returns a product or a chargeback occurs, the corresponding commission will be deducted from your balance. If the balance is insufficient, it may result in a negative balance.</li>
+                <li><strong>Fraud Prevention:</strong> We reserve the right to withhold commissions and suspend accounts if we detect fraudulent activity, including but not limited to self-referrals via duplicate accounts, bot traffic, or cookie stuffing.</li>
+            </ul>
 
-            <h2>4. Limitation of Liability</h2>
-            <p>RugVibe is provided "as is". We are not liable for any indirect damages or loss of profits arising from the use of our app or the affiliate program.</p>
+            <h2>4. User Conduct</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the app for any illegal purpose.</li>
+                <li>Reverse engineer, decompile, or attempt to extract the source code of the app.</li>
+                <li>Interfere with or disrupt the integrity or performance of the app.</li>
+                <li>Harass, abuse, or harm another person or group.</li>
+            </ul>
 
-            <h2>5. Changes to Terms</h2>
-            <p>We may update these terms at any time. Continued use of the app constitutes acceptance of the new terms.</p>
+            <h2>5. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless [App Name], its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including legal fees, arising out of or in any way connected with your access to or use of the app, your User Content, or your violation of these Terms.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, [App Name] shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses.</p>
+
+            <h2>7. Dispute Resolution</h2>
+            <p>Any disputes arising out of or relating to these Terms or the Services will be resolved through binding arbitration, rather than in court, except that you may assert claims in small claims court if your claims qualify.</p>
+
+            <h2>8. Termination</h2>
+            <p>We reserve the right to suspend or terminate your account and access to the Service at our sole discretion, without notice, for conduct that we believe violates these Terms or is harmful to other users of the Service, us, or third parties, or for any other reason.</p>
+
+            <h2>9. Changes to Terms</h2>
+            <p>We may modify these Terms at any time. We will provide notice of material changes. Your continued use of the Service following the posting of changes constitutes your acceptance of such changes.</p>
         </div>
     </div>
 
