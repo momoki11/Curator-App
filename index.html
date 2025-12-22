@@ -14,7 +14,7 @@
             --primary-color: #E07A5F; /* Terracotta */
             --text-color: #333;
             --bg-color: #FAFAF9; /* Warm Stone */
-            --header-height: 60px;
+            --header-height: 70px;
             --font-main: 'Inter', sans-serif;
         }
 
@@ -49,13 +49,13 @@
             display: flex;
             background: #f0f0f0;
             border-radius: 8px;
-            padding: 2px;
+            padding: 4px;
         }
 
         .tab-btn {
             border: none;
             background: transparent;
-            padding: 8px 24px;
+            padding: 10px 24px;
             font-size: 14px;
             font-weight: 600;
             font-family: var(--font-main);
@@ -76,6 +76,7 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            padding-bottom: 80px;
         }
 
         .content-section {
@@ -87,37 +88,56 @@
             display: block;
         }
 
-        h1 { font-size: 24px; margin-bottom: 10px; color: #111; font-weight: 700; }
-        h2 { font-size: 18px; margin-top: 30px; margin-bottom: 15px; color: #111; border-bottom: 1px solid #eee; padding-bottom: 5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-        h3 { font-size: 16px; margin-top: 20px; margin-bottom: 10px; font-weight: 600; color: #444; }
-        p { font-size: 14px; margin-bottom: 15px; color: #444; text-align: justify; }
+        h1 { font-size: 28px; margin-bottom: 10px; color: #111; font-weight: 700; letter-spacing: -0.5px; }
+        h2 { font-size: 20px; margin-top: 40px; margin-bottom: 15px; color: #111; border-bottom: 1px solid #eee; padding-bottom: 10px; font-weight: 600; }
+        h3 { font-size: 16px; margin-top: 25px; margin-bottom: 10px; font-weight: 600; color: #444; }
+        p { font-size: 15px; margin-bottom: 15px; color: #444; text-align: justify; }
         ul, ol { margin-bottom: 15px; padding-left: 20px; }
-        li { font-size: 14px; margin-bottom: 8px; color: #444; }
+        li { font-size: 15px; margin-bottom: 8px; color: #444; }
         
         .update-date {
-            font-size: 12px;
+            font-size: 13px;
             color: #999;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             display: block;
             font-style: italic;
         }
 
         a { color: var(--primary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
         
+        /* Table of Contents Styles */
+        .toc-container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .toc-container h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #999;
+        }
+
         .toc-link {
             display: block;
             font-size: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             cursor: pointer;
             color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
         }
 
-        .toc-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #eee;
+        .toc-link:hover {
+            color: #c0583f;
+            text-decoration: underline;
         }
 
         @keyframes fadeIn {
@@ -130,13 +150,16 @@
 
     <header>
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('privacy')">Privacy Policy</button>
+            <button class="tab-btn active" onclick="switchTab('privacy')">Privacy Notice</button>
             <button class="tab-btn" onclick="switchTab('terms')">Terms of Service</button>
         </div>
     </header>
 
     <div class="container">
+        
+        <!-- ========================================== -->
         <!-- PRIVACY POLICY SECTION -->
+        <!-- ========================================== -->
         <div id="privacy" class="content-section active">
             <h1>Privacy Notice</h1>
             <span class="update-date">Last Updated: November 1, 2024</span>
@@ -157,7 +180,7 @@
                 <a class="toc-link" onclick="scrollToSection('prpo-10')">10. European Privacy Rights</a>
                 <a class="toc-link" onclick="scrollToSection('prpo-11')">11. Nevada Privacy Rights</a>
                 <a class="toc-link" onclick="scrollToSection('prpo-12')">12. California Privacy Rights</a>
-                <a class="toc-link" onclick="scrollToSection('prpo-13')">13. CO, CT, UT, and VA Privacy Rights</a>
+                <a class="toc-link" onclick="scrollToSection('prpo-13')">13. Colorado, Connecticut, Utah, and Virginia Privacy Rights</a>
                 <a class="toc-link" onclick="scrollToSection('prpo-14')">14. Security Measures and Storage Limits</a>
                 <a class="toc-link" onclick="scrollToSection('prpo-15')">15. SMS Privacy Policy</a>
                 <a class="toc-link" onclick="scrollToSection('prpo-16')">16. Updates to this Privacy Notice</a>
@@ -166,7 +189,7 @@
             <h2 id="prpo-1">1. Our Details and How To Contact Us</h2>
             <p>MyHazelHome is the controller of your personal data. If you have any questions about this Privacy Notice or our processing activities, you can contact us via:</p>
             <ul>
-                <li><strong>Email:</strong> privacy@MyHazelHome.com (or EMAIL@MHH.com)</li>
+                <li><strong>Email:</strong> privacy@MyHazelHome.com</li>
                 <li><strong>Mailing Address:</strong> Attn: Legal-MyHazelHome, 300 Welsh Rd, Building One, Ste. 100, Horsham PA</li>
             </ul>
 
@@ -176,7 +199,6 @@
                 <li><strong>Account Data:</strong> Name, Email Address, Mailing Address, Phone Number, Username, Password.</li>
                 <li><strong>User-Generated Content (UGC) & AI Inputs:</strong> Data you provide to generate designs, including <strong>text prompts</strong> used for AI generation and <strong>uploaded reference images</strong>.</li>
                 <li><strong>Financial Info:</strong> Information to process payments or payouts (processed via third parties like Stripe/PayPal).</li>
-                <li><strong>Interests & Preferences:</strong> Favorites, interests, and transaction details.</li>
             </ul>
 
             <h2 id="prpo-3">3. Information We Automatically Collect from Your Device or Browser</h2>
@@ -184,7 +206,6 @@
             <ul>
                 <li><strong>Device Data:</strong> Device type, advertising ID, IP address, OS, browser type.</li>
                 <li><strong>Affiliate Tracking Data:</strong> Information regarding referring URLs (e.g., when you are referred by an affiliate partner) to calculate commissions.</li>
-                <li><strong>"View in Your Room" Data:</strong> If you use AR features, we may access your camera with your consent.</li>
                 <li><strong>Usage Data:</strong> Pages viewed, time spent, and interaction with features.</li>
                 <li><strong>Location Data:</strong> Imprecise location inferred from IP address (Country, State, City).</li>
             </ul>
@@ -243,7 +264,9 @@
             <p>We may modify this notice at any time. Continued use of Services constitutes acceptance.</p>
         </div>
 
+        <!-- ========================================== -->
         <!-- TERMS OF SERVICE SECTION -->
+        <!-- ========================================== -->
         <div id="terms" class="content-section">
             <h1>Terms of Service</h1>
             <span class="update-date">Effective as of: March 18, 2025</span>
@@ -255,16 +278,16 @@
                 <a class="toc-link" onclick="scrollToSection('tos-1')">I. INTRODUCTION</a>
                 <a class="toc-link" onclick="scrollToSection('tos-2')">II. ACCOUNTS</a>
                 <a class="toc-link" onclick="scrollToSection('tos-3')">III. USER CONTENT, AI & ACCEPTABLE USE</a>
-                <a class="toc-link" onclick="scrollToSection('tos-4')">IV. ARTIST TERMS AND CONDITIONS</a>
-                <a class="toc-link" onclick="scrollToSection('tos-5')">V. AFFILIATE PROGRAM TERMS</a>
-                <a class="toc-link" onclick="scrollToSection('tos-6')">VI. CUSTOMER TERMS AND CONDITIONS</a>
-                <a class="toc-link" onclick="scrollToSection('tos-7')">VII. MOBILE SERVICES</a>
-                <a class="toc-link" onclick="scrollToSection('tos-8')">VIII. RESOLUTION OF DISPUTES</a>
-                <a class="toc-link" onclick="scrollToSection('tos-9')">IX. ADDITIONAL TERMS & CONDITIONS</a>
+                <a class="toc-link" onclick="scrollToSection('tos-4')">IV. AFFILIATE PROGRAM TERMS</a>
+                <a class="toc-link" onclick="scrollToSection('tos-5')">V. CUSTOMER TERMS AND CONDITIONS</a>
+                <a class="toc-link" onclick="scrollToSection('tos-6')">VI. MOBILE SERVICES</a>
+                <a class="toc-link" onclick="scrollToSection('tos-7')">VII. RESOLUTION OF DISPUTES</a>
+                <a class="toc-link" onclick="scrollToSection('tos-8')">VIII. ADDITIONAL TERMS & CONDITIONS</a>
+                <a class="toc-link" onclick="scrollToSection('tos-9')">IX. GENERAL PROVISIONS</a>
             </div>
 
             <h2 id="tos-1">I. INTRODUCTION</h2>
-            <p>MyHazelHome ("we", "us") provides services that allow artists/users to display, promote, and sell artwork, and customers to purchase products. By using our Services, you agree to these Terms, our Privacy Policy, and Copyright Policy.</p>
+            <p>MyHazelHome ("we", "us") provides services that allow users to display, promote, and sell designs, and customers to purchase products. By using our Services, you agree to these Terms, our Privacy Policy, and Copyright Policy.</p>
 
             <h2 id="tos-2">II. ACCOUNTS</h2>
             <p>You must be 18+ to use the Services. You agree to provide accurate information and secure your password. We reserve the right to suspend or terminate accounts for violations.</p>
@@ -277,38 +300,44 @@
                 <li><strong>Prohibited Content:</strong> You agree not to generate or upload content that is illegal, hateful, violent, sexually explicit, or infringes on third-party intellectual property rights.</li>
             </ul>
             </p>
+            <p><strong>Content Moderation & Appeals:</strong> We reserve the right to review and remove any User Content that we believe violates these Terms or our policies. If you believe your content was removed in error, you may appeal by contacting us at privacy@MyHazelHome.com.</p>
             <p><strong>Acceptable Use:</strong> You agree not to scrape, hack, or interfere with the Services, or use them for illegal purposes.</p>
 
-            <h2 id="tos-4">IV. ARTIST TERMS AND CONDITIONS</h2>
-            <p>Artists may submit Works they own. You grant us a license to display and sell Products incorporating your Works. You are responsible for ensuring you have all rights to your Works.</p>
-            <p><strong>Artist Earnings:</strong> You are entitled to earnings on sold products as calculated in our Pricing & Earnings policy. We may withhold taxes where required.</p>
+            <!-- REMOVED ARTIST TERMS AS PER REQUEST -->
 
-            <h2 id="tos-5">V. AFFILIATE PROGRAM TERMS</h2>
+            <h2 id="tos-4">IV. AFFILIATE PROGRAM TERMS</h2>
             <p>If you participate in our Affiliate Program to refer users or products:</p>
             <ul>
                 <li><strong>Independent Contractor:</strong> Your relationship with MyHazelHome is that of an independent contractor, not an employee or partner.</li>
                 <li><strong>Marketing & Disclosure (FTC Compliance):</strong> When sharing links, you <strong>must clearly disclose</strong> your relationship with us (e.g., using #ad, #sponsored, or stating that you earn a commission). Failure to comply may result in account termination.</li>
                 <li><strong>Commission Structure:</strong> You earn commission on net sales generated through your unique links.</li>
-                <li><strong>Locking Period:</strong> Commissions are held in "Pending" state for <strong>35 days</strong> to account for returns.</li>
+                <li><strong>Locking Period:</strong> Commissions are held in "Pending" state for a period determined by us (currently set to <strong>35 days</strong>, but subject to change at our sole discretion) after the order is shipped. This period accounts for our return policy and processing time.</li>
                 <li><strong>Fraud Prevention:</strong> Self-referrals, cookie stuffing, and bot traffic are prohibited and may lead to forfeiture of commissions.</li>
             </ul>
 
-            <h2 id="tos-6">VI. CUSTOMER TERMS AND CONDITIONS</h2>
+            <h2 id="tos-5">V. CUSTOMER TERMS AND CONDITIONS</h2>
             <p>Orders are subject to availability and our acceptance. Prices and shipping are shown at checkout. Products are subject to our 30-day Return Policy.</p>
 
-            <h2 id="tos-7">VII. MOBILE SERVICES</h2>
+            <h2 id="tos-6">VI. MOBILE SERVICES</h2>
             <p>Standard carrier rates apply. If you opt-in to SMS marketing, you can opt-out by replying "STOP".</p>
 
-            <h2 id="tos-8">VIII. RESOLUTION OF DISPUTES</h2>
+            <h2 id="tos-7">VII. RESOLUTION OF DISPUTES</h2>
             <p><strong>Governing Law:</strong> California.</p>
             <p><strong>Arbitration Agreement:</strong> Disputes will be resolved by <strong>binding, individual arbitration</strong> (AAA or ICDR rules). Class actions are NOT allowed. You may opt-out within 30 days of first use.</p>
             <p><strong>Venue:</strong> Los Angeles County, California.</p>
 
-            <h2 id="tos-9">IX. ADDITIONAL TERMS & CONDITIONS</h2>
+            <h2 id="tos-8">VIII. ADDITIONAL TERMS & CONDITIONS</h2>
             <p><strong>Indemnification:</strong> You agree to indemnify MyHazelHome against claims arising from your use of Services, your Content, or your violation of these Terms.</p>
             <p><strong>No Warranty:</strong> Services are provided "AS IS".</p>
             <p><strong>Limitation of Liability:</strong> Our liability is limited to the amount paid to you or by you in the prior 3 months.</p>
             <p><strong>Export Controls:</strong> You represent you are not in a sanctioned country.</p>
+
+            <h2 id="tos-9">IX. GENERAL PROVISIONS</h2>
+            <p><strong>Force Majeure:</strong> We shall not be liable for any failure or delay in performance under these Terms due to causes beyond our reasonable control, including but not limited to acts of God, war, strikes or labor disputes, embargoes, government orders, or any other force majeure event.</p>
+            <p><strong>Entire Agreement:</strong> These Terms constitute the entire agreement between you and MyHazelHome regarding your use of the Services and supersede any prior agreements between you and MyHazelHome relating to such subject matter.</p>
+            <p><strong>Severability:</strong> If any provision of these Terms is held to be invalid or unenforceable, such provision shall be struck and the remaining provisions shall be enforced to the fullest extent under law.</p>
+            <p><strong>No Waiver:</strong> The failure of MyHazelHome to enforce any right or provision of these Terms will not constitute a waiver of future enforcement of that right or provision.</p>
+            <p><strong>Assignment:</strong> You may not assign or transfer these Terms, by operation of law or otherwise, without MyHazelHome's prior written consent. MyHazelHome may assign or transfer these Terms, at its sole discretion, without restriction.</p>
         </div>
     </div>
 
@@ -325,7 +354,7 @@
         function scrollToSection(id) {
             const element = document.getElementById(id);
             if (element) {
-                const headerOffset = 70;
+                const headerOffset = 80;
                 const elementPosition = element.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({
