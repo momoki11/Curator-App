@@ -15,7 +15,7 @@
             --text-color: #333;
             --bg-color: #FAFAF9; /* Warm Stone */
             
-            /* 安全区域变量 (适配 iPhone 灵动岛) */
+            /* Safe Area Variables */
             --safe-top: env(safe-area-inset-top, 20px);
             --safe-bottom: env(safe-area-inset-bottom, 20px);
             
@@ -38,7 +38,6 @@
             max-width: 800px;
             margin: 0 auto;
             padding-bottom: calc(40px + var(--safe-bottom)); 
-            /* 增加顶部内边距，避开状态栏 */
             padding-top: calc(20px + var(--safe-top));
         }
 
@@ -60,7 +59,7 @@
         a { color: var(--primary-color); text-decoration: none; }
         a:hover { text-decoration: underline; }
         
-        /* 目录样式 */
+        /* TOC Styles */
         .toc-container {
             background: #fff;
             padding: 25px;
@@ -106,51 +105,50 @@
 
         <div class="toc-container">
             <h3>Table of Contents</h3>
-            <a class="toc-link" onclick="scrollToSection('prpo-1')">1. Our Details and How To Contact Us</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-2')">2. Personal Information that We Collect from You</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-3')">3. Information We Automatically Collect</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-1')">1. Complaints & Contact Us</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-2')">2. Data Collection: Personal Information</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-3')">3. Data Collection: Automatically Collected</a>
             <a class="toc-link" onclick="scrollToSection('prpo-4')">4. Information We Collect from Third Parties</a>
             <a class="toc-link" onclick="scrollToSection('prpo-5')">5. How We Use Your Personal Information</a>
             <a class="toc-link" onclick="scrollToSection('prpo-6')">6. Advertising and Analytics</a>
             <a class="toc-link" onclick="scrollToSection('prpo-7')">7. Third Parties to Whom We Disclose Information</a>
             <a class="toc-link" onclick="scrollToSection('prpo-8')">8. Cookies and Tracking Technologies</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-9')">9. The Privacy of Children</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-10')">10. European Privacy Rights</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-11')">11. Nevada Privacy Rights</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-12')">12. California Privacy Rights</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-13')">13. CO, CT, UT, and VA Privacy Rights</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-14')">14. Security Measures and Storage Limits</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-15')">15. SMS Privacy Policy</a>
-            <a class="toc-link" onclick="scrollToSection('prpo-16')">16. Updates to this Privacy Notice</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-9')">9. Age Restriction & Children's Privacy</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-10')">10. Nevada Privacy Rights</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-11')">11. California Privacy Rights</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-12')">12. CO, CT, UT, and VA Privacy Rights</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-13')">13. Data Security and Storage</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-14')">14. SMS Privacy Policy</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-15')">15. Updates to this Privacy Notice</a>
+            <a class="toc-link" onclick="scrollToSection('prpo-16')">16. Remove Your Account & Personal Data</a>
         </div>
 
-        <h2 id="prpo-1">1. Our Details and How To Contact Us</h2>
-        <p>Telstraight International Inc. is the controller of your personal data. If you have any questions about this Privacy Notice or our processing activities, you can contact us via:</p>
+        <h2 id="prpo-1">1. Complaints & Contact Us</h2>
+        <p>Telstraight International Inc. is the controller of your personal data. If you have any questions, concerns, or complaints about this Privacy Notice or our processing activities, you can contact us via:</p>
         <ul>
             <li>Email: privacy@Telstraight.com</li>
             <li>Mailing Address: Attn: Legal-Telstraight International Inc., 300 Welsh Rd, Building One, Ste. 100, Horsham PA</li>
         </ul>
 
-        <h2 id="prpo-2">2. Personal Information that We Collect from You</h2>
+        <h2 id="prpo-2">2. Data Collection: Personal Information</h2>
         <p>We collect and process personal information you make available to us if you register, download or use the Services:</p>
         <ul>
             <li>Account Data: Name, Email Address, Mailing Address, Phone Number, Username, Password.</li>
             <li>User-Generated Content (UGC) & AI Inputs: Data you provide to generate designs, including text prompts used for AI generation and uploaded reference images.</li>
-            <li>Financial Info: Information to process payments or payouts (processed via third parties like Stripe/PayPal).</li>
+            <li>Financial Info: Information to process payments or payouts.</li>
             <li>Interests & Preferences: Favorites, interests, and transaction details.</li>
         </ul>
 
-        <h2 id="prpo-3">3. Information We Automatically Collect from Your Device or Browser</h2>
+        <h2 id="prpo-3">3. Data Collection: Automatically Collected</h2>
         <p>We automatically collect:</p>
         <ul>
             <li>Device Data: Device type, advertising ID, IP address, OS, browser type.</li>
             <li>Affiliate Tracking Data: Information regarding referring URLs (e.g., when you are referred by an affiliate partner) to calculate commissions.</li>
-            <li>"View in Your Room" Data: If you use AR features, we may access your camera with your consent.</li>
             <li>Usage Data: Pages viewed, time spent, and interaction with features.</li>
             <li>Location Data: Imprecise location inferred from IP address (Country, State, City).</li>
         </ul>
 
-        <h2 id="prpo-4">4. Information We Collect from Third Parties about You</h2>
+        <h2 id="prpo-4">4. Information We Collect from Third Parties</h2>
         <p>We may combine information we collect with information from third-party sources (data aggregators, marketing partners) to tailor communications and improve services.</p>
 
         <h2 id="prpo-5">5. How We Use Your Personal Information</h2>
@@ -166,7 +164,7 @@
         <h2 id="prpo-6">6. Advertising and Analytics</h2>
         <p>We work with third-party advertisers and analytics companies. We may share hashed/pseudonymized data (like email or ad IDs) to serve targeted ads ("Matched Ads"). You can opt-out of these as described in Section 12 & 13.</p>
 
-        <h2 id="prpo-7">7. Third Parties to Whom We Disclose Your Personal Information</h2>
+        <h2 id="prpo-7">7. Third Parties to Whom We Disclose Information</h2>
         <p>We disclose information to:</p>
         <ul>
             <li>AI Service Providers: Text prompts and images are sent to AI models to generate designs.</li>
@@ -176,32 +174,39 @@
             <li>Legal Authorities: When required by law or to protect rights.</li>
         </ul>
 
-        <h2 id="prpo-8">8. Cookies and Other Tracking Technologies</h2>
-        <p>We use cookies, pixel tags, and SDKs. You can control these via the "Cookie Settings" link on our website or browser settings (including Global Privacy Control).</p>
+        <h2 id="prpo-8">8. Cookies and Tracking Technologies</h2>
+        <p>We use cookies, pixel tags, and SDKs to operate our Services, analyze performance, and facilitate affiliate tracking. You can control these via the "Cookie Settings" link on our website or browser settings (including Global Privacy Control).</p>
+        <p>Do Not Track (DNT): Please note that we generally do not respond to "Do Not Track" signals sent by web browsers, as there is no consistent industry standard for compliance.</p>
 
-        <h2 id="prpo-9">9. The Privacy of Children</h2>
-        <p>The Services are not intended for children under 18. We do not knowingly collect data from children under 18.</p>
+        <h2 id="prpo-9">9. Age Restriction & Children's Privacy</h2>
+        <p>Age Restriction: Our Services are not intended for or directed to individuals under the age of 18. By using the App, you represent that you are at least 18 years of age.</p>
+        <p>We do not knowingly collect personal data from children under 18. If we become aware that a child has provided us with personal data, we will take steps to delete such information immediately. If you believe we might have any information from a child, please contact us.</p>
 
-        <h2 id="prpo-10">10. European Privacy Rights</h2>
-        <p>For users in the EEA, UK, and Switzerland: We process data based on contract performance, consent, or legitimate interests. You have rights to access, correct, erase, and port your data. We comply with the EU-U.S. Data Privacy Framework.</p>
-
-        <h2 id="prpo-11">11. Nevada Privacy Rights</h2>
+        <h2 id="prpo-10">10. Nevada Privacy Rights</h2>
         <p>Nevada residents may opt-out of the sale of "covered information".</p>
 
-        <h2 id="prpo-12">12. California Privacy Rights</h2>
+        <h2 id="prpo-11">11. California Privacy Rights</h2>
         <p>California residents (CCPA/CPRA) have rights to know, correct, delete, and opt-out of the "sale" or "sharing" of personal information. We do not knowingly sell info of minors under 16.</p>
 
-        <h2 id="prpo-13">13. Colorado, Connecticut, Utah, and Virginia Privacy Rights</h2>
+        <h2 id="prpo-12">12. CO, CT, UT, and VA Privacy Rights</h2>
         <p>Residents of these states have rights to access, correct, delete, and opt-out of targeted advertising and sales of data.</p>
 
-        <h2 id="prpo-14">14. Security Measures and Storage Limits</h2>
-        <p>We use industry-standard safeguards. Data is retained only as long as necessary for business or legal purposes.</p>
+        <h2 id="prpo-13">13. Data Security and Storage</h2>
+        <p>We implement appropriate technical and organizational measures (such as encryption and access controls) to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure.</p>
 
-        <h2 id="prpo-15">15. SMS Privacy Policy</h2>
+        <h2 id="prpo-14">14. SMS Privacy Policy</h2>
         <p>If you opt-in to SMS, we may send promotional messages. You can reply "STOP" to opt-out. Mobile carrier fees may apply.</p>
 
-        <h2 id="prpo-16">16. Updates to this Privacy Notice</h2>
+        <h2 id="prpo-15">15. Updates to this Privacy Notice</h2>
         <p>We may modify this notice at any time. Continued use of Services constitutes acceptance.</p>
+
+        <h2 id="prpo-16">16. Remove Your Account & Personal Data</h2>
+        <p>You have the right to request the deletion of your account and associated personal data at any time.</p>
+        <ul>
+            <li>How to Delete: You can initiate account deletion directly within the App by navigating to Settings > Delete Account. Alternatively, you may contact us at privacy@Telstraight.com.</li>
+            <li>What Happens: Upon request, your profile, portfolio, and personal data will be permanently deleted from our active databases within 30 days.</li>
+            <li>Exceptions: We may retain certain information (such as transaction history and tax records for affiliate payouts) as required by law or for legitimate business purposes (e.g., fraud prevention).</li>
+        </ul>
     </div>
 
     <script>
